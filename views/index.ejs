@@ -1,0 +1,21 @@
+<%- include('header'); -%>
+
+  <div id="list">
+    <div>
+      ToDoのtitle入力：<input type="text" id="todoTitle" /><button id="postButton">新規追加</button><br>
+      ToDoのcompleted状態：<input type="checkbox" id="todoCompleted" />
+    </div>
+    <div>
+      操作対象id：<input type="text" id="itemId" /><br>
+      <button id="putButton">このidのToDoを更新</button><br>
+      <button id="deleteButton">このidのToDoを削除</button><br>
+    </div>
+    <hr>
+    <div>ToDoリスト<br>
+      id, title, completed</div>
+    <div id="todoRoot"></div>
+  </div>
+
+  <script src="script2.js" charset="utf-8"></script>  
+
+<%- include('footer'); -%>
