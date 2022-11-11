@@ -8,6 +8,7 @@ const apiEndPoint = '/api/';
 const todos = [
   { id: 1, title: 'ネーム', completed: true },
   { id: 2, title: '下書き', completed: false },
+  { id: 3, title: '清書', completed: false },
 ];
 
 // ユーザデータ
