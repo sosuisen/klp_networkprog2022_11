@@ -1,14 +1,14 @@
-<%- include('header'); -%>
+<%- include('header'); %>
 
   <div id="config">
     <h2>
       設定
     </h2>
     <div>
-      <% Object.entries(config).forEach(function(conf){ %>
+      <% Object.entries(config).forEach(conf => { %>
         <%= conf[0] + ": " + conf[1] %><br />
       <% }); %>
     </div>
   </div>
 
-<%- include('footer'); -%>
+<%- include('footer'); %>

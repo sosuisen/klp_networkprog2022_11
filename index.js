@@ -34,7 +34,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 /* 
- * 静的ページ
+ * 動的ページ(SSR)
  */
 
 app.get('/', (req, res) => {
@@ -53,7 +53,7 @@ app.get('/config', (req, res) => {
   });
 });
 
-// 上記以外のURLは、staticディレクトリ以下のファイルを静的データとして返す
+// 上記以外のURLは、staticディレクトリ以下のファイルを静的ページとして返す
 app.use(express.static('static'));
 
 /*
