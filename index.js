@@ -11,6 +11,8 @@ const todos = [
   { id: 3, title: '清書', completed: false },
 ];
 
+const importantTodos = [1, 3];
+
 // ユーザデータ
 const userProfile = { 
   id: 'KCG',
@@ -53,6 +55,21 @@ app.get('/config', (req, res) => {
     config
   });
 });
+
+app.get('/important', (req, res) => {
+  const iTodos = [];
+  for(let i=0; i<todos.length; i++){
+    if(importantTodos.includes(todos[i].id)) iTodos.push(todos[i]);
+  }
+  // 1行で書くならこうです
+  // const iTodos = todos.filter(todo => importantTodos.includes(todo.id));
+  res.render('important', {
+    user: userProfile,
+    todos: iTodos,
+  });
+});
+
+
 
 // 上記以外のURLは、staticディレクトリ以下のファイルを静的ページとして返す
 app.use(express.static('static'));

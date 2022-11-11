@@ -1,0 +1,14 @@
+<%- include('header'); %>
+
+  <div>
+    <h2>
+      重要なToDo
+    </h2>
+    <div>
+        <% todos.forEach(todo => { %>
+            <%= todo.id + ', ' + todo.title + ', ' + todo.completed %><br />
+          <% }); %>
+    </div>
+  </div>
+
+<%- include('footer'); %>
