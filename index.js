@@ -11,13 +11,14 @@ const todos = [
   { id: 3, title: '清書', completed: false },
 ];
 
-const importantTodos = [1, 3];
+const importantTodos = [1, 2];
 
 // ユーザデータ
 const userProfile = { 
   id: 'KCG',
   name: '京都コンピュータ学院',
   birthday: '1963年〇月△日',
+  hobby: 'プログラミング',
 };
 
 // 設定データ
